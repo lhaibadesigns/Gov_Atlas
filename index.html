@@ -1,0 +1,2589 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=1920, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="images/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="js/load.js"></script><script id="anima-hotspots-script" src="js/hotspots.js"></script><script id="anima-overrides-script" src="js/overrides.js"></script><script src="js/timeline.js"></script><style>
+@import url("css/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:500,700,400|Manrope:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/668a96e3f1077d330fbdbdd5.668a96e4f1077d330fbdbdd8.0ZqPcni.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --abbey: #4f4f4f;
+  --black: #000000;
+  --black-pearl: #050f27;
+  --desert-storm: #f7f8f8;
+  --tuna: #2a3347;
+  --white: #ffffff;
+ 
+  --font-size-l: 24px;
+  --font-size-m: 22px;
+  --font-size-s: 18px;
+  --font-size-xl: 35px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 65px;
+  --font-size-xxxl: 145px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-manrope: "Manrope", Helvetica;
+}
+.txt {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.bodymdregular {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.inter-medium-black-pearl-18px {
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-bold-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-white-22px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.manrope-normal-abbey-22px {
+  color: var(--abbey);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-pearl-22px {
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-medium-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-bold-black-145px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-white-145px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-normal-abbey-22px {
+  color: var(--abbey);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-tuna-24px {
+  color: var(--tuna);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-medium-black-27px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-medium-black-pearl-72px {
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-medium-black-65px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-normal-black-pearl-24px {
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - gov-atlas-landing-page */
+
+.gov-atlas-landing-page {
+  background-color: var(--white);
+  height: 8910px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.gov-atlas-landing-page .frame-34-KmNYrO {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 46px;
+  left: 60px;
+  position: absolute;
+  top: 1470px;
+}
+
+.gov-atlas-landing-page .frame-29-9prU71 {
+  background-color: transparent;
+  background-image: url(images/frame-29.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 80px;
+  height: 1203px;
+  position: relative;
+  width: 447px;
+}
+
+.gov-atlas-landing-page .frame-8-9prU71 {
+  background-color: transparent;
+  height: 1203px;
+  overflow: hidden;
+  position: relative;
+  width: 1307px;
+}
+
+.gov-atlas-landing-page .rectangle-752-qNz336 {
+  height: 1203px;
+  width: 1307px;
+}
+
+.gov-atlas-landing-page .frame-7-qNz336 {
+  background-color: transparent;
+  height: 934px;
+  left: 234px;
+  position: absolute;
+  top: 143px;
+  width: 876px;
+}
+
+.gov-atlas-landing-page .title-bT5RHW {
+  background-color: transparent;
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: -69px;
+  letter-spacing: -4.35px;
+  line-height: 147.9px;
+  position: absolute;
+  text-align: left;
+  top: -98px;
+  width: 1398px;
+}
+
+.gov-atlas-landing-page .asesoramiento-en-inv-bT5RHW {
+  background-color: transparent;
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: -69px;
+  letter-spacing: -1.05px;
+  line-height: 35.7px;
+  position: absolute;
+  text-align: left;
+  top: 71px;
+  width: 704px;
+}
+
+.gov-atlas-landing-page .un-equipo-multidisci-bT5RHW {
+  background-color: transparent;
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: -69px;
+  letter-spacing: -1.05px;
+  line-height: 35.7px;
+  position: absolute;
+  text-align: left;
+  top: 509px;
+  width: 704px;
+}
+
+.gov-atlas-landing-page .somos-una-consultora-bT5RHW {
+  background-color: transparent;
+  height: auto;
+  left: -69px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 154px;
+  width: 876px;
+}
+
+.gov-atlas-landing-page .gov-atlas-sl-es-el-r-bT5RHW {
+  background-color: transparent;
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: -69px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 593px;
+  width: 876px;
+}
+
+.gov-atlas-landing-page .span0-DxxKHP {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gov-atlas-landing-page .span1-DxxKHP {
+  font-style: normal;
+}
+
+.gov-atlas-landing-page .frame-6-bT5RHW {
+  align-items: center;
+  background-color: #040f27;
+  border-radius: 26px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 74px;
+  justify-content: center;
+  left: -69px;
+  overflow: hidden;
+  padding: 33px 24px;
+  pointer-events: auto;
+  position: absolute;
+  top: 940px;
+  transition: all 0.2s ease;
+  width: 226px;
+}
+
+.gov-atlas-landing-page .frame-6-bT5RHW:hover {
+  background-color: #292929
+}
+
+.gov-atlas-landing-page .contctenos-ck8M3P {
+  margin-bottom: -7.00px;
+  margin-top: -9.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .group-374-KmNYrO {
+  background-color: transparent;
+  height: 91px;
+  left: 60px;
+  position: absolute;
+  top: 42px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-44-GxH2Rx {
+  background-color: transparent;
+  height: 91px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-4-6OVbLP {
+  background-color: transparent;
+  height: 91px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .rectangle-750-6LVNrq {
+  background-color: var(--desert-storm);
+  border-radius: 128px;
+  height: 91px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-2-6LVNrq {
+  background-color: transparent;
+  height: 60px;
+  left: 62px;
+  position: absolute;
+  top: 16px;
+  width: 136px;
+}
+
+.gov-atlas-landing-page .hutly-LI000N {
+  background-color: transparent;
+  height: 28px;
+  left: 63px;
+  position: absolute;
+  top: 19px;
+  width: 62px;
+}
+
+.gov-atlas-landing-page .frame-1-LI000N {
+  background-color: transparent;
+  height: 60px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.gov-atlas-landing-page .rectangle-781-RR5IgT {
+  background-color: #ffffffcc;
+  border-radius: 28.57px;
+  height: 9px;
+  left: 20px;
+  position: absolute;
+  top: 26px;
+  transform: rotate(-120.00deg);
+  width: 31px;
+}
+
+.gov-atlas-landing-page .rectangle-779-RR5IgT {
+  background-color: var(--white);
+  border-radius: 28.57px;
+  height: 9px;
+  left: 5px;
+  position: absolute;
+  top: 36px;
+  width: 50px;
+}
+
+.gov-atlas-landing-page .rectangle-780-RR5IgT {
+  background-color: transparent;
+  height: 29px;
+  left: 9px;
+  position: absolute;
+  top: 16px;
+  width: 22px;
+}
+
+.gov-atlas-landing-page .image-LI000N {
+  background-color: transparent;
+  height: 10px;
+  left: 126px;
+  position: absolute;
+  top: 17px;
+  width: 10px;
+}
+
+.gov-atlas-landing-page .frame-3-6LVNrq {
+  left: 676px;
+}
+
+.gov-atlas-landing-page .about-us-eYOCRM {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .management-eYOCRM {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .project-eYOCRM {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .faqs-eYOCRM {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .button-6LVNrq {
+  background-color: transparent;
+  height: 91px;
+  left: 1620px;
+  position: absolute;
+  top: 0px;
+  width: 185px;
+}
+
+.gov-atlas-landing-page .frame-19-wYkhed {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 16px 100px 100px 16px;
+  display: inline-flex;
+  gap: 8px;
+  height: 91px;
+  justify-content: center;
+  left: 0px;
+  overflow: hidden;
+  padding: 33px 43px;
+  position: relative;
+  top: 0px;
+}
+
+.gov-atlas-landing-page .contact-us-i0Gt3d {
+  background-color: transparent;
+  color: var(--black-pearl);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  margin-top: -0.50px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .frame-38-6OVbLP {
+  left: 0px;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .rectangle-750-z1bhff {
+  background-color: var(--desert-storm);
+  border-radius: 128px;
+  height: 91px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .group-z1bhff {
+  background-color: transparent;
+  height: 31px;
+  left: 54px;
+  position: absolute;
+  top: 29px;
+  width: 183px;
+}
+
+.gov-atlas-landing-page .frame-3-z1bhff {
+  left: 512px;
+}
+
+.gov-atlas-landing-page .home-sJe6aP {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .sobre-nosotros-sJe6aP {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .servicios-sJe6aP {
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .confianza-sJe6aP {
+  letter-spacing: -0.36px;
+  line-height: 24px;
+}
+
+.gov-atlas-landing-page .nuestro-objetivo-sJe6aP {
+  letter-spacing: -0.36px;
+  line-height: 24px;
+}
+
+.gov-atlas-landing-page .retroalimentacin-sJe6aP {
+  background-color: transparent;
+  letter-spacing: -0.36px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .button-z1bhff {
+  background-color: transparent;
+  cursor: pointer;
+  height: 91px;
+  left: 1626px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 176px;
+}
+
+.gov-atlas-landing-page .button-z1bhff:hover {
+  transform: scale(1.1);
+}
+
+.gov-atlas-landing-page .rectangle-747-r5MKuK {
+  height: 91px;
+}
+
+.gov-atlas-landing-page .rectangle-748-r5MKuK {
+  height: 91px;
+}
+
+.gov-atlas-landing-page .contctenos-r5MKuK {
+  height: auto;
+  left: 32px;
+  position: absolute;
+  top: 33px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .ellipse-5-z1bhff {
+  background-color: #141313;
+  border-radius: 2.5px;
+  height: 5px;
+  left: 533px;
+  position: absolute;
+  top: 60px;
+  width: 5px;
+}
+
+.gov-atlas-landing-page .services-KmNYrO {
+  background-color: var(--desert-storm);
+  border-radius: 80px;
+  height: 1055px;
+  left: 60px;
+  position: absolute;
+  top: 2764px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-41-LaBx6Z {
+  background-color: transparent;
+  height: 680px;
+  left: -168px;
+  position: absolute;
+  top: 208px;
+  width: 2138px;
+}
+
+.gov-atlas-landing-page .frame-40-XrmGaw {
+  background-color: transparent;
+  height: 680px;
+  left: 0px;
+  position: relative;
+  top: 68px;
+  width: 2138px;
+}
+
+.gov-atlas-landing-page .frame-20-QN6fbr {
+  background-color: var(--black);
+  border-radius: 40px;
+  display: block;
+  height: 713px;
+  left: 254px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  transform: translate(25px, 0);
+  width: 515px;
+}
+
+.gov-atlas-landing-page .frame-20-QN6fbr.animate-enter {
+  animation: animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(25px, 0);
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 0;
+transform: translate(25px, 0);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.gov-atlas-landing-page .x01-xiLBgt {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 398px;
+  letter-spacing: 0.00px;
+  line-height: 76px;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .frame-23-xiLBgt {
+  background-color: transparent;
+  height: 372px;
+  left: 40px;
+  position: absolute;
+  top: 216px;
+  width: 435px;
+}
+
+.gov-atlas-landing-page .asesoramiento-legal-cy62O1 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 72px;
+  position: absolute;
+  text-align: left;
+  top: -61px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .derecho-internaciona-cy62O1 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .leer-ms-N9AFgx {
+  color: var(--white);
+}
+
+.gov-atlas-landing-page .frame-21-QN6fbr {
+  background-color: var(--white);
+  border-radius: 40px;
+  height: 713px;
+  left: 796px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 515px;
+}
+
+.gov-atlas-landing-page .x02-9HFlZQ {
+  background-color: transparent;
+  height: auto;
+  left: 375px;
+  letter-spacing: 0.00px;
+  line-height: 76px;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .frame-24-9HFlZQ {
+  background-color: transparent;
+  height: 372px;
+  left: 40px;
+  position: absolute;
+  top: 216px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .asesoramiento-financiero-HgtyLQ {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 72px;
+  position: absolute;
+  text-align: left;
+  top: -59px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .estudios-de-mercado-HgtyLQ {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .leer-ms-UZzTrI {
+  color: var(--black);
+}
+
+.gov-atlas-landing-page .frame-22-QN6fbr {
+  background-color: var(--white);
+  border-radius: 40px;
+  height: 713px;
+  left: 1336px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 515px;
+}
+
+.gov-atlas-landing-page .anlisis-de-sector-in-HPUKSj {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .leer-ms-5rIfN3 {
+  color: var(--black);
+}
+
+.gov-atlas-landing-page .frame-23-QN6fbr {
+  background-color: var(--white);
+  border-radius: 40px;
+  height: 713px;
+  left: 1878px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 515px;
+}
+
+.gov-atlas-landing-page .the-design-of-furnit-0xqjg2 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .servicios-LaBx6Z {
+  height: auto;
+  left: 86px;
+  letter-spacing: -4.35px;
+  line-height: 147.9px;
+  position: absolute;
+  top: 65px;
+  width: 835px;
+}
+
+.gov-atlas-landing-page .group-371-KmNYrO {
+  background-color: transparent;
+  height: 1203px;
+  left: 60px;
+  position: absolute;
+  top: 163px;
+  width: 1808px;
+}
+
+.gov-atlas-landing-page .subtract-CViXvA {
+  background-color: transparent;
+  height: 1203px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .calle-gran-capitn-25-CViXvA {
+  background-color: transparent;
+  height: auto;
+  left: 86px;
+  letter-spacing: -0.66px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 110px;
+  width: 494px;
+}
+
+.gov-atlas-landing-page .calle-prncipe-de-ver-CViXvA {
+  background-color: transparent;
+  height: auto;
+  left: 86px;
+  letter-spacing: -0.66px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 265px;
+  width: 494px;
+}
+
+.gov-atlas-landing-page .chess-is-the-art-of-analysis-CViXvA {
+  background-color: transparent;
+  height: auto;
+  left: 657px;
+  letter-spacing: -5.80px;
+  line-height: 155.2px;
+  position: absolute;
+  text-align: left;
+  top: 76px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .rectangle-750-CViXvA {
+  background-color: transparent;
+  height: 712px;
+  left: 653px;
+  object-fit: cover;
+  position: absolute;
+  top: 425px;
+  width: 1076px;
+}
+
+.gov-atlas-landing-page .frame-36-CViXvA {
+  background-color: transparent;
+  height: 715px;
+  left: 1px;
+  position: absolute;
+  top: 487px;
+  width: 545px;
+}
+
+.gov-atlas-landing-page .frame-37-CViXvA {
+  background-color: transparent;
+  height: 470px;
+  left: 87px;
+  position: absolute;
+  top: 687px;
+  width: 1px;
+}
+
+.gov-atlas-landing-page .hagmoslo-wv5FuQ {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 345px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .pensamiento-estratgico-clave-del-xito-wv5FuQ {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: -3px;
+  letter-spacing: -1.22px;
+  line-height: 68.3px;
+  position: absolute;
+  text-align: left;
+  top: 133px;
+  width: 458px;
+}
+
+.gov-atlas-landing-page .frame-6-wv5FuQ {
+  align-items: center;
+  background-color: var(--black);
+  border-radius: 26px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 74px;
+  justify-content: center;
+  left: 0px;
+  overflow: hidden;
+  padding: 33px 24px;
+  pointer-events: auto;
+  position: absolute;
+  top: 406px;
+  transition: all 0.2s ease;
+  width: 226px;
+}
+
+.gov-atlas-landing-page .frame-6-wv5FuQ:hover {
+  background-color: #383838
+}
+
+.gov-atlas-landing-page .contctenos-JBQiWc {
+  margin-bottom: -7.00px;
+  margin-top: -9.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .mikhail-botvinnik-CViXvA {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1450px;
+  letter-spacing: -1.00px;
+  line-height: 26.8px;
+  position: absolute;
+  text-align: left;
+  top: 341px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .rectangle-751-CViXvA {
+  background-color: transparent;
+  height: 199px;
+  left: 85px;
+  object-fit: cover;
+  position: absolute;
+  top: 607px;
+  width: 394px;
+}
+
+.gov-atlas-landing-page .group-368-KmNYrO {
+  background-color: transparent;
+  height: 1163px;
+  left: 60px;
+  position: absolute;
+  top: 3910px;
+  width: 1802px;
+}
+
+.gov-atlas-landing-page .group-365-BN64WT {
+  background-color: transparent;
+  height: 1163px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .rectangle-753-kWDiWt {
+  background-color: var(--black);
+  border-radius: 80px;
+  height: 1163px;
+  left: 0px;
+  top: 0px;
+}
+
+.gov-atlas-landing-page .frame-33-kWDiWt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 220px;
+  height: 176px;
+  left: 100px;
+  position: absolute;
+  top: 125px;
+  width: 722px;
+}
+
+.gov-atlas-landing-page .frame-32-r2FQGt {
+  background-color: transparent;
+  flex: 0 0 auto;
+  margin-bottom: -408.00px;
+  margin-right: -1077.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .frame-26-HT3Mur {
+  left: -20px;
+  top: 0px;
+}
+
+.gov-atlas-landing-page .confianza-iz9x33 {
+  letter-spacing: -2.90px;
+  line-height: 175.2px;
+}
+
+.gov-atlas-landing-page .frame-15-HT3Mur {
+  align-items: center;
+  background-color: #ffffff0d;
+  border-radius: 76.81px;
+  display: flex;
+  gap: 11.327433586120605px;
+  height: 962px;
+  justify-content: center;
+  left: 1044px;
+  overflow: hidden;
+  padding: 46.72566223144531px 33.9822998046875px;
+  position: absolute;
+  top: 0px;
+  width: 564px;
+}
+
+.gov-atlas-landing-page .logo-hackathongssa-1-9y40Ic {
+  height: 1018px;
+  margin-bottom: -74.73px;
+  margin-left: -657.31px;
+  margin-top: -74.73px;
+  object-fit: cover;
+  width: 1810.6614990234375px;
+}
+
+.gov-atlas-landing-page .este-principio-es-la-BN64WT {
+  color: var(--white);
+  left: 86px;
+  top: 386px;
+}
+
+.gov-atlas-landing-page .frame-6-BN64WT {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 26px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 74px;
+  justify-content: center;
+  left: 86px;
+  overflow: hidden;
+  padding: 33px 24px;
+  pointer-events: auto;
+  position: absolute;
+  top: 1005px;
+  transition: all 0.2s ease;
+  width: 226px;
+}
+
+.gov-atlas-landing-page .frame-6-BN64WT:hover {
+  background-color: #353535
+}
+
+.gov-atlas-landing-page .contctenos-z3gK3X {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: -7.00px;
+  margin-top: -9.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .group-369-KmNYrO {
+  background-color: transparent;
+  height: 917px;
+  left: 64px;
+  position: absolute;
+  top: 7579px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .rectangle-754-CJW8tj {
+  background-color: var(--black);
+  border-radius: 80px;
+  height: 917px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-46-CJW8tj {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 26px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 74px;
+  justify-content: center;
+  left: 100px;
+  overflow: hidden;
+  padding: 33px 24px;
+  pointer-events: auto;
+  position: absolute;
+  top: 794px;
+  transition: all 0.2s ease;
+  width: 226px;
+}
+
+.gov-atlas-landing-page .frame-46-CJW8tj:hover {
+  background-color: #292929
+}
+
+.gov-atlas-landing-page .send-y7qBT3 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  margin-bottom: -7.00px;
+  margin-top: -9.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .container-CJW8tj {
+  background-color: transparent;
+  height: 214px;
+  left: 100px;
+  position: absolute;
+  top: 181px;
+  width: 1596px;
+}
+
+.gov-atlas-landing-page .text-container-WPeuWV {
+  background-color: transparent;
+  height: 149px;
+  left: 0px;
+  position: relative;
+  top: -130px;
+  width: 535px;
+}
+
+.gov-atlas-landing-page .paragraph-QxMmSq {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 33px;
+  position: absolute;
+  text-align: left;
+  top: 170px;
+  width: 801px;
+}
+
+.gov-atlas-landing-page .heading-QxMmSq {
+  height: auto;
+  left: -5px;
+  position: absolute;
+  top: -7px;
+  width: 1653px;
+}
+
+.gov-atlas-landing-page .span0-UfAeUH {
+}
+
+.gov-atlas-landing-page .span1-UfAeUH {
+}
+
+.gov-atlas-landing-page .contact-form-CJW8tj {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  left: 99px;
+  position: absolute;
+  top: 360px;
+  width: 1609px;
+}
+
+.gov-atlas-landing-page .container-9EU6d1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.gov-atlas-landing-page .heading-I6oGtW {
+  align-self: stretch;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .input-feild-I6oGtW {
+  border-color: var(--abbey);
+}
+
+.gov-atlas-landing-page .text-67GM0r {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .text-67GM0r::placeholder {
+  color: #4f4f4f99;
+}
+
+.gov-atlas-landing-page .heading-LFOs8D {
+  align-self: stretch;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .input-feild-LFOs8D {
+  border-color: var(--abbey);
+}
+
+.gov-atlas-landing-page .text-drFEz9 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .text-drFEz9::placeholder {
+  color: #4f4f4f99;
+}
+
+.gov-atlas-landing-page .container-ySvx2i {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.gov-atlas-landing-page .heading-xV1xQd {
+  align-self: stretch;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .input-feild-xV1xQd {
+  border-color: var(--abbey);
+}
+
+.gov-atlas-landing-page .text-3JFx92 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .text-3JFx92::placeholder {
+  color: #4f4f4f99;
+}
+
+.gov-atlas-landing-page .heading-Dopwrj {
+  align-self: stretch;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .input-feild-Dopwrj {
+  border-color: #00000033;
+}
+
+.gov-atlas-landing-page .text-GZXTOy {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .text-GZXTOy::placeholder {
+  color: #4f4f4f99;
+}
+
+.gov-atlas-landing-page .container-Qmke5N {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.gov-atlas-landing-page .heading-FAmHNL {
+  align-self: stretch;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .input-feild-FAmHNL {
+  border-color: var(--abbey);
+}
+
+.gov-atlas-landing-page .text-CqT4LH {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .text-CqT4LH::placeholder {
+  color: #4f4f4f99;
+}
+
+.gov-atlas-landing-page .vector-19-CqT4LH {
+  background-color: transparent;
+  height: 11px;
+  left: 1595px;
+  position: absolute;
+  top: 43px;
+  width: 12px;
+}
+
+.gov-atlas-landing-page .group-373-KmNYrO {
+  height: 392px;
+  left: 61px;
+  top: 8587px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .group-370-VfwMqc {
+  background-color: transparent;
+  height: 392px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1810px;
+}
+
+.gov-atlas-landing-page .rectangle-753-d4MjjG {
+  background-color: var(--desert-storm);
+  border-radius: 80px 80px 0px 0px;
+  height: 392px;
+  left: 0px;
+  top: 0px;
+}
+
+.gov-atlas-landing-page .group-367-d4MjjG {
+  background-color: transparent;
+  height: 108px;
+  left: 74px;
+  position: absolute;
+  top: 107px;
+  width: 365px;
+}
+
+.gov-atlas-landing-page .intagram-Lkwh6X {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 175.2px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 93px;
+}
+
+.gov-atlas-landing-page .facebook-Lkwh6X {
+  background-color: transparent;
+  height: auto;
+  left: 131px;
+  letter-spacing: 0.00px;
+  line-height: 175.2px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.gov-atlas-landing-page .linkedin-Lkwh6X {
+  background-color: transparent;
+  height: auto;
+  left: 272px;
+  letter-spacing: 0.00px;
+  line-height: 175.2px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.gov-atlas-landing-page .x2023-gov-atlas-sl-all-rights-reserved-d4MjjG {
+  background-color: transparent;
+  color: var(--abbey);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 74px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 264px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .infogovatlascom-d4MjjG {
+  background-color: transparent;
+  color: var(--abbey);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1586px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 264px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .x34-958-27-26-04-d4MjjG {
+  background-color: transparent;
+  color: var(--abbey);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1385px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 264px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .vector-20-d4MjjG {
+  background-color: transparent;
+  height: 1px;
+  left: 76px;
+  object-fit: cover;
+  position: absolute;
+  top: 238px;
+  width: 1654px;
+}
+
+.gov-atlas-landing-page .frame-38-d4MjjG {
+  left: 981px;
+  top: 125px;
+  width: 749px;
+}
+
+.gov-atlas-landing-page .rectangle-750-FYmvZx {
+  background-color: var(--white);
+  border-radius: 128px;
+  height: 68px;
+  left: 0px;
+  position: absolute;
+  top: 23px;
+  width: 749px;
+}
+
+.gov-atlas-landing-page .email-FYmvZx {
+  background-color: transparent;
+  color: var(--abbey);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 44px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .button-FYmvZx {
+  background-color: transparent;
+  height: 68px;
+  left: 575px;
+  position: absolute;
+  top: 23px;
+  width: 176px;
+}
+
+.gov-atlas-landing-page .rectangle-747-YsdxNG {
+  height: 68px;
+}
+
+.gov-atlas-landing-page .rectangle-748-YsdxNG {
+  height: 68px;
+}
+
+.gov-atlas-landing-page .contctenos-YsdxNG {
+  height: auto;
+  left: 31px;
+  position: absolute;
+  top: 20px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .suscribirse-al-peridico-d4MjjG {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 1024px;
+  letter-spacing: 0.00px;
+  line-height: 63px;
+  position: absolute;
+  text-align: left;
+  top: 31px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .suscrbete-para-recib-d4MjjG {
+  background-color: transparent;
+  height: auto;
+  left: 1025px;
+  letter-spacing: 0.00px;
+  line-height: 63px;
+  position: absolute;
+  text-align: left;
+  top: 78px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .rectangle-753-KmNYrO {
+  background-color: var(--desert-storm);
+  border-radius: 80px;
+  height: 1163px;
+  left: 60px;
+  top: 5164px;
+}
+
+.gov-atlas-landing-page .frame-26-KmNYrO {
+  left: 140px;
+  top: 5265px;
+}
+
+.gov-atlas-landing-page .nuestro-objetivo-xYprpe {
+  letter-spacing: -2.90px;
+  line-height: 175.2px;
+}
+
+.gov-atlas-landing-page .frame-15-KmNYrO {
+  align-items: center;
+  background-color: #ffffff0d;
+  border-radius: 76.81px;
+  display: flex;
+  gap: 11.327433586120605px;
+  height: 767px;
+  justify-content: center;
+  left: 144px;
+  overflow: hidden;
+  padding: 46.72566223144531px 33.9822998046875px;
+  position: absolute;
+  top: 5500px;
+  width: 555px;
+}
+
+.gov-atlas-landing-page .logo-hackathongssa-1-ML9GwG {
+  height: 767px;
+  margin-bottom: -46.73px;
+  margin-left: -33.98px;
+  margin-top: -46.73px;
+  width: 555px;
+}
+
+.gov-atlas-landing-page .este-principio-es-la-KmNYrO {
+  color: var(--black);
+  left: 769px;
+  top: 5548px;
+}
+
+.gov-atlas-landing-page .frame-45-KmNYrO {
+  align-items: center;
+  background-color: var(--black);
+  border-radius: 26px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 74px;
+  justify-content: center;
+  left: 766px;
+  overflow: hidden;
+  padding: 33px 24px;
+  pointer-events: auto;
+  position: absolute;
+  top: 6185px;
+  transition: all 0.2s ease;
+  width: 226px;
+}
+
+.gov-atlas-landing-page .frame-45-KmNYrO:hover {
+  background-color: #272727
+}
+
+.gov-atlas-landing-page .contctenos-Fy2qxL {
+  margin-bottom: -7.00px;
+  margin-top: -9.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .frame-14-KmNYrO {
+  background-color: transparent;
+  height: 1070px;
+  left: 60px;
+  position: absolute;
+  top: 6418px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .rectangle-752-E259ze {
+  height: 1070px;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .frame-43-E259ze {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 26px;
+  left: 88px;
+  position: absolute;
+  top: 84px;
+}
+
+.gov-atlas-landing-page .frame-42-Z8nraL {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.gov-atlas-landing-page .lo-que-dicen-nuestros-clientes-xpKnHY {
+  background-color: transparent;
+  letter-spacing: -4.35px;
+  line-height: 147.9px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 1113px;
+}
+
+.gov-atlas-landing-page .frame-13-xpKnHY {
+  background-color: transparent;
+  height: 431px;
+  margin-left: -13px;
+  position: relative;
+  width: 524px;
+}
+
+.gov-atlas-landing-page .su-servicio-premium-cNX4eg {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 70px;
+  width: 444px;
+}
+
+.gov-atlas-landing-page .frame-10-cNX4eg {
+  align-items: flex-end;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gov-atlas-landing-page .ashley-cooper-5PrVJe {
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .component-29-5PrVJe {
+  background-color: transparent;
+  height: 14.630523681640625px;
+  position: relative;
+  width: 85.43827819824219px;
+}
+
+.gov-atlas-landing-page .frame-30-Z8nraL {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 26px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .frame-14-XNDLeJ {
+  background-color: transparent;
+  height: 431px;
+  position: relative;
+  width: 524px;
+}
+
+.gov-atlas-landing-page .con-el-paquete-plati-Ghdtid {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 70px;
+  width: 444px;
+}
+
+.gov-atlas-landing-page .frame-10-Ghdtid {
+  height: 59px;
+  width: 170px;
+}
+
+.gov-atlas-landing-page .ashley-cooper-ZPnD5I {
+  height: auto;
+  left: -19px;
+  position: absolute;
+  top: -1px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .component-29-ZPnD5I {
+  background-color: transparent;
+  height: 15px;
+  left: 69px;
+  position: absolute;
+  top: 44px;
+  width: 85px;
+}
+
+.gov-atlas-landing-page .frame-15-XNDLeJ {
+  background-color: transparent;
+  height: 431px;
+  position: relative;
+  width: 524px;
+}
+
+.gov-atlas-landing-page .gov-atlas-me-trat-de-xAXTrH {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 70px;
+  width: 444px;
+}
+
+.gov-atlas-landing-page .frame-10-xAXTrH {
+  height: 59px;
+  width: 169px;
+}
+
+.gov-atlas-landing-page .ashley-cooper-yQ0CVB {
+  height: auto;
+  left: -23px;
+  position: absolute;
+  top: -1px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .component-29-yQ0CVB {
+  background-color: transparent;
+  height: 15px;
+  left: 64px;
+  position: absolute;
+  top: 44px;
+  width: 85px;
+}
+
+.gov-atlas-landing-page .frame-16-XNDLeJ {
+  background-color: transparent;
+  height: 431px;
+  position: relative;
+  width: 524px;
+}
+
+.gov-atlas-landing-page .el-compromiso-de-la-FHWoN4 {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 70px;
+  width: 444px;
+}
+
+.gov-atlas-landing-page .frame-10-FHWoN4 {
+  align-items: flex-end;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gov-atlas-landing-page .ashley-cooper-nZo8Jg {
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .component-29-nZo8Jg {
+  background-color: transparent;
+  height: 14.630523681640625px;
+  position: relative;
+  width: 85.43827819824219px;
+}
+
+.gov-atlas-landing-page .la-confianza-como-pi-KmNYrO {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 146px;
+  letter-spacing: -1.05px;
+  line-height: 35.7px;
+  position: absolute;
+  text-align: left;
+  top: 4213px;
+  width: 704px;
+}
+
+.gov-atlas-landing-page .pilar-de-nuestras-relaciones-y-servicios-KmNYrO {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 766px;
+  letter-spacing: -1.05px;
+  line-height: 35.7px;
+  position: absolute;
+  text-align: left;
+  top: 5499px;
+  width: 704px;
+}
+
+.gov-atlas-landing-page .group-373-OUWs0V {
+  height: 42px;
+  left: 136px;
+  top: 8643px;
+  width: 247px;
+}
+
+.gov-atlas-landing-page .ashley-cooper {
+  background-color: transparent;
+  letter-spacing: -0.68px;
+  line-height: normal;
+  text-align: center;
+}
+
+.gov-atlas-landing-page .coco-bold-arrow-right {
+  background-color: transparent;
+  height: 24px;
+  left: 104px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.gov-atlas-landing-page .confianza {
+  background-color: transparent;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .consultora-estratgica {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 72px;
+  position: absolute;
+  text-align: left;
+  top: -62px;
+  width: auto;
+}
+
+.gov-atlas-landing-page .contctenos {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.gov-atlas-landing-page .este-principio-es-la {
+  background-color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: left;
+  width: 999px;
+}
+
+.gov-atlas-landing-page .frame-10 {
+  background-color: transparent;
+  left: 312px;
+  position: absolute;
+  top: 333px;
+}
+
+.gov-atlas-landing-page .frame-25 {
+  background-color: transparent;
+  height: 372px;
+  left: 40px;
+  position: absolute;
+  top: 216px;
+  width: 436px;
+}
+
+.gov-atlas-landing-page .frame-26 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 75px;
+  position: absolute;
+}
+
+.gov-atlas-landing-page .frame-3 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 50px;
+  position: absolute;
+  top: 34px;
+}
+
+.gov-atlas-landing-page .frame-38 {
+  background-color: transparent;
+  height: 91px;
+  position: absolute;
+}
+
+.gov-atlas-landing-page .group-366 {
+  background-color: transparent;
+  height: 36px;
+  left: 330px;
+  position: absolute;
+  top: 652px;
+  width: 130px;
+}
+
+.gov-atlas-landing-page .group-373 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.gov-atlas-landing-page .heading {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .input-feild {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 14px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.gov-atlas-landing-page .leer-ms {
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.gov-atlas-landing-page .logo-hackathongssa-1 {
+  background-color: transparent;
+  margin-right: -33.98px;
+  position: relative;
+}
+
+.gov-atlas-landing-page .msg-1 {
+  background-color: transparent;
+  height: 431px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 526px;
+}
+
+.gov-atlas-landing-page .nuestro-objetivo {
+  background-color: transparent;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.gov-atlas-landing-page .rectangle-410 {
+  background-color: var(--white);
+  border-radius: 44px;
+  height: 431px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 524px;
+}
+
+.gov-atlas-landing-page .rectangle-747 {
+  background-color: var(--black);
+  border-radius: 0px 100px 100px 0px;
+  left: 13px;
+  position: absolute;
+  top: 0px;
+  width: 161px;
+}
+
+.gov-atlas-landing-page .rectangle-748 {
+  background-color: var(--black);
+  border-radius: 0px 100px 100px 0px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transform: rotate(180deg);
+  width: 13px;
+}
+
+.gov-atlas-landing-page .rectangle-752 {
+  background-color: var(--desert-storm);
+  border-radius: 80px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.gov-atlas-landing-page .rectangle-753 {
+  position: absolute;
+  width: 1800px;
+}
+
+.gov-atlas-landing-page .servicios {
+  background-color: transparent;
+  text-align: left;
+}
+
+.gov-atlas-landing-page .sub-container {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.gov-atlas-landing-page .x03 {
+  background-color: transparent;
+  height: auto;
+  left: 384px;
+  letter-spacing: 0.00px;
+  line-height: 76px;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  white-space: nowrap;
+  width: auto;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="gov-atlas-landing-page"><div class="container-center-horizontal"><form class="gov-atlas-landing-page screen " data-id="1:614" name="form1" action="form1" method="post"><input type="text" name="trapit" value="" style="display:none;"><div class="frame-34-KmNYrO" data-id="1:616"><div class="frame-29-9prU71" data-id="1:617-7ccf0ff5-e414-4201-83db-6be1aa58e988"></div><div class="frame-8-9prU71" data-id="1:618"><div class="rectangle-752-qNz336 rectangle-752" data-id="1:619"></div><div class="frame-7-qNz336" data-id="1:628"><h1 class="title-bT5RHW" data-id="1:629">Sobre Nosotros</h1><p class="asesoramiento-en-inv-bT5RHW" data-id="36:47">Asesoramiento en inversiones extranjeras<br>para empresas e inversores particulares.</p><p class="un-equipo-multidisci-bT5RHW" data-id="36:48">Un equipo multidisciplinario para la internacionalización y el desarrollo.</p><p class="somos-una-consultora-bT5RHW inter-normal-black-pearl-22px" data-id="1:630">Somos una consultora independiente y privada especializada en el asesoramiento sobre inversiones extranjeras. Ofrecemos servicios profesionales, personalizados<br>y condenciales, a empresas internacionales, las cuales planean sus primeras inversiones en España y en aquellos países donde opera nuestra red internacional, así como a aquellas que desean expandir o diversicar su presencia en diferentes regiones. De igual forma, ofrecemos nuestros servicios a inversores particulares ayudándoles a entender el panorama global y a denir e implementar su estrategia de atracción y promoción de inversiones, ya que trabajamos con diferentes instituciones y empresas del ámbito público, privado, nacional e internacional.</p><p class="gov-atlas-sl-es-el-r-bT5RHW" data-id="36:49"><span class="span0-DxxKHP">GOV Atlas S.L.</span><span class="span1-DxxKHP inter-normal-black-pearl-22px">, es el resultado del esfuerzo común de un grupo de experimentados profesionales especializados en derecho, relaciones internacionales, ingeniería, arquitectura, internacionalización y atracción de inversiones, así como en desarrollo urbanístico. Contamos además con asociaciones estratégicas, tanto en el panorama nacional como internacional con rmas que son referencia en sus respectivos campos profesionales. El principal objetivo de esta nueva iniciativa es aportar un mayor valor a nuestra base de clientes, a sus socios internacionales, y a todas aquellas empresas y particulares que desean incluir a España en su desarrollo global.</span></p><div class="frame-6-bT5RHW smart-layers-pointers" data-id="1:631"><div class="contctenos-ck8M3P contctenos inter-bold-white-18px" data-id="1:632">Contáctenos</div></div></div></div></div><div class="group-374-KmNYrO" data-id="33:714"><div class="frame-44-GxH2Rx" data-id="1:636"><div class="frame-4-6OVbLP" data-id="1:637"><div class="rectangle-750-6LVNrq" data-id="1:638"></div><div class="frame-2-6LVNrq" data-id="1:639"><img class="hutly-LI000N" data-id="1:640" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/hutly.svg" alt="Hutly"><div class="frame-1-LI000N" data-id="1:641"><div class="rectangle-781-RR5IgT" data-id="1:642"></div><div class="rectangle-779-RR5IgT" data-id="1:643"></div><img class="rectangle-780-RR5IgT" data-id="1:644" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/rectangle-780.svg" alt="Rectangle 780"></div><img class="image-LI000N" data-id="1:645" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/-.svg" alt="image"></div><div class="frame-3-6LVNrq frame-3" data-id="1:646"><div class="about-us-eYOCRM inter-medium-white-18px" data-id="1:647">About Us</div><div class="management-eYOCRM inter-medium-white-18px" data-id="1:648">Management</div><div class="project-eYOCRM inter-medium-white-18px" data-id="1:649">Project</div><div class="faqs-eYOCRM inter-medium-white-18px" data-id="1:650">FAQ`s</div></div><div class="button-6LVNrq" data-id="1:651"><div class="frame-19-wYkhed" data-id="1:652"><div class="contact-us-i0Gt3d" data-id="1:653">Contact Us</div></div></div></div><div class="frame-38-6OVbLP frame-38" data-id="1:654"><div class="rectangle-750-z1bhff" data-id="1:655"></div><img class="group-z1bhff" data-id="30:168" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/group@2x.png" alt="Group"><div class="frame-3-z1bhff frame-3" data-id="1:663"><div class="home-sJe6aP inter-medium-black-pearl-18px" data-id="1:664">Home</div><div class="sobre-nosotros-sJe6aP inter-medium-black-pearl-18px" data-id="1:665">Sobre Nosotros</div><div class="servicios-sJe6aP servicios inter-medium-black-pearl-18px" data-id="1:667">Servicios</div><div class="confianza-sJe6aP confianza inter-medium-black-pearl-18px" data-id="8:1641">Confianza</div><div class="nuestro-objetivo-sJe6aP nuestro-objetivo inter-medium-black-pearl-18px" data-id="33:711">Nuestro objetivo</div><div class="retroalimentacin-sJe6aP inter-medium-black-pearl-18px" data-id="1:666">Retroalimentación</div></div><div class="button-z1bhff smart-layers-pointers" data-id="1:668"><div class="rectangle-747-r5MKuK rectangle-747" data-id="1:669"></div><div class="rectangle-748-r5MKuK rectangle-748" data-id="1:670"></div><div class="contctenos-r5MKuK contctenos inter-bold-white-18px" data-id="1:671">Contáctenos</div></div><div class="ellipse-5-z1bhff" data-id="1:672"></div></div></div></div><div class="services-KmNYrO" data-id="1:712"><div class="frame-41-LaBx6Z" data-id="1:713"><div class="frame-40-XrmGaw" data-id="1:715"><div class="frame-20-QN6fbr animate-enter" data-id="1:716"><div class="x01-xiLBgt" data-id="1:717">01</div><div class="frame-23-xiLBgt" data-id="1:718"><div class="asesoramiento-legal-cy62O1" data-id="1:719">Asesoramiento<br>legal</div><p class="derecho-internaciona-cy62O1" data-id="1:720">Derecho internacional de los negocios: inversiones extranjeras y comercio internacional.<br>Contratación internacional y movilidad internacional de trabajadores.<br>Relaciones internacionales: derecho consular y diplomático.</p></div><div class="group-366" data-id="7:1615"><div class="leer-ms-N9AFgx leer-ms txt" data-id="7:1610">Leer más</div><img class="coco-bold-arrow-right" data-id="7:1613" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/coco-bold-arrow---right.png" alt="COCO/Bold/Arrow - Right"></div></div><div class="frame-21-QN6fbr" data-id="1:721"><div class="x02-9HFlZQ inter-medium-black-pearl-72px" data-id="1:722">02</div><div class="frame-24-9HFlZQ" data-id="1:723"><div class="asesoramiento-financiero-HgtyLQ inter-medium-black-65px" data-id="1:724">Asesoramiento<br>financiero</div><p class="estudios-de-mercado-HgtyLQ inter-normal-black-pearl-24px" data-id="1:725">Estudios de mercado.<br>Planes de viabilidad.<br>Desarrollo de estrategias de inversión.<br>Implantación de estructuras fiscales y financieras.</p></div><div class="group-366" data-id="7:1620"><div class="leer-ms-UZzTrI leer-ms txt" data-id="7:1621">Leer más</div><img class="coco-bold-arrow-right" data-id="7:1622" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/coco-bold-arrow---right-1.svg" alt="COCO/Bold/Arrow - Right"></div></div><div class="frame-22-QN6fbr" data-id="1:726"><div class="x03 inter-medium-black-pearl-72px" data-id="1:727">03</div><div class="frame-25" data-id="1:728"><div class="consultora-estratgica inter-medium-black-65px" data-id="1:729">Consultoría<br>estratégica</div><p class="anlisis-de-sector-in-HPUKSj inter-normal-black-pearl-24px" data-id="1:730">Análisis de sector inmobiliario, económico, bursátil y de divisas.</p></div><div class="group-366" data-id="7:1628"><div class="leer-ms-5rIfN3 leer-ms txt" data-id="7:1629">Leer más</div><img class="coco-bold-arrow-right" data-id="7:1630" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/coco-bold-arrow---right-1.svg" alt="COCO/Bold/Arrow - Right"></div></div><div class="frame-23-QN6fbr" data-id="7:1604"><div class="x03 inter-medium-black-pearl-72px" data-id="7:1605">03</div><div class="frame-25" data-id="7:1606"><div class="consultora-estratgica inter-medium-black-65px" data-id="7:1607">Consultoría<br>estratégica</div><p class="the-design-of-furnit-0xqjg2 inter-normal-black-pearl-24px" data-id="7:1608">The design of furniture holds substantial influence over the aesthetics, ambiance, and usability of an area, exerting a profound effect on our everyday experiences.</p></div></div></div></div><div class="servicios-LaBx6Z servicios inter-bold-black-145px" data-id="1:714">Servicios</div></div><div class="group-371-KmNYrO" data-id="30:388"><img class="subtract-CViXvA" data-id="1:615" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/subtract.svg" alt="Subtract"><p class="calle-gran-capitn-25-CViXvA inter-normal-black-pearl-22px" data-id="1:673">Calle Gran Capitán, 25 18002 - Granada, España. <br>+34 958 27 26 04<br>info@govatlas.com</p><p class="calle-prncipe-de-ver-CViXvA inter-normal-black-pearl-22px" data-id="3:1594">Calle Príncipe de Vergara, 62, 1º derecha 29006, Madrid, España.<br>info@govatlas.com</p><p class="chess-is-the-art-of-analysis-CViXvA inter-bold-black-145px" data-id="1:677">“Chess is the art<br>of analysis.”</p><img class="rectangle-750-CViXvA" data-id="1:731" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/rectangle-750.png" alt="Rectangle 750"><img class="frame-36-CViXvA" data-id="1:732" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/frame-36.svg" alt="Frame 36"><div class="frame-37-CViXvA" data-id="1:754"><div class="hagmoslo-wv5FuQ txt" data-id="1:755">— Hagámoslo</div><p class="pensamiento-estratgico-clave-del-xito-wv5FuQ" data-id="1:756">Pensamiento estratégico. Clave del éxito.</p><div class="frame-6-wv5FuQ smart-layers-pointers" data-id="1:757"><div class="contctenos-JBQiWc contctenos inter-bold-white-18px" data-id="1:758">Contáctenos</div></div></div><div class="mikhail-botvinnik-CViXvA" data-id="3:1589">— Mikhail Botvinnik</div><img class="rectangle-751-CViXvA" data-id="3:1598" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/rectangle-751@2x.png" alt="Rectangle 751"></div><div class="group-368-KmNYrO" data-id="30:366"><div class="group-365-BN64WT" data-id="1:734"><div class="rectangle-753-kWDiWt rectangle-753" data-id="1:735"></div><div class="frame-33-kWDiWt" data-id="1:736"><div class="frame-32-r2FQGt" data-id="1:737"><div class="frame-26-HT3Mur frame-26" data-id="1:738"><div class="confianza-iz9x33 confianza inter-bold-white-145px" data-id="1:739">Confianza</div></div><div class="frame-15-HT3Mur" data-id="1:741"><img class="logo-hackathongssa-1-9y40Ic logo-hackathongssa-1" data-id="7:1632" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/logo-hackathongssa-1.png" alt="logo-hackathongssa 1"></div></div></div></div><p class="este-principio-es-la-BN64WT este-principio-es-la" data-id="7:1633">Este principio es la base sobre la que se articulará toda relación. Desde el primer contacto que tenemos con nuestros clientes hasta las relaciones más solidas con aquellos con los que llevamos trabajando muchos años. La conanza es el elemento que con más esmero trabajamos cada día. Cercanía, contacto directo y plena disponibilidad. Trabajamos con clientes en los cinco continentes y nos desplazamos personalmente siempre que la situación lo requiera. Nuestro servicio no es un trabajo de cantidad, sino de calidad. Volvemos así al punto de encuentro: nuestros clientes nos seleccionan y nosotros seleccionamos también con quien trabajar. Este hecho, aunque mucho más trabajoso, nos permite trabajar de manera personal e involucrarnos individualmente con cada uno de vosotros. Como dijimos, se trata de seguir ampliando este círculo virtuoso, dándoles acceso a nuestro entorno relacional y profesional, con los que también intercambiarán experiencias y oportunidades únicas y exclusivas.<br><br>Por tanto, trataremos de generar ese espacio de conanza desde el primer momento, y, no les quepa duda, trabajaremos cada día para que ese nexo aumente y se haga más fuerte.</p><div class="frame-6-BN64WT smart-layers-pointers" data-id="8:1634"><div class="contctenos-z3gK3X contctenos" data-id="8:1635">Contáctenos</div></div></div><div class="group-369-KmNYrO" data-id="30:385"><div class="rectangle-754-CJW8tj" data-id="28:108"></div><a href="javascript:SubmitForm('form1')"><div class="frame-46-CJW8tj smart-layers-pointers" data-id="28:139"><div class="send-y7qBT3" data-id="28:140">Send</div></div></a><div class="container-CJW8tj" data-id="28:31"><div class="text-container-WPeuWV" data-id="28:32"><p class="paragraph-QxMmSq" data-id="28:36">Have a specific inquiry or message for us?<br>Please use the contact form below, and we'll get back to you promptly.</p><div class="heading-QxMmSq heading inter-bold-white-145px" data-id="28:35"><span class="span0-UfAeUH inter-bold-white-145px">Send </span><span class="span1-UfAeUH inter-bold-white-145px">a message</span></div></div></div><div class="contact-form-CJW8tj" data-id="28:115"><div class="container-9EU6d1" data-id="28:116"><div class="sub-container" data-id="28:117"><div class="heading-I6oGtW heading inter-bold-white-22px" data-id="28:118">First Name</div><div class="input-feild-I6oGtW input-feild" data-id="28:119"><input class="text-67GM0r manrope-normal-abbey-22px" data-id="28:120" name="text" placeholder="First Name" type="text" required=""></div></div><div class="sub-container" data-id="28:121"><div class="heading-LFOs8D heading inter-bold-white-22px" data-id="28:122">Last Name</div><div class="input-feild-LFOs8D input-feild" data-id="28:123"><input class="text-drFEz9 manrope-normal-abbey-22px" data-id="28:124" name="text" placeholder="Last name" type="text" required=""></div></div></div><div class="container-ySvx2i" data-id="28:125"><div class="sub-container" data-id="28:126"><div class="heading-xV1xQd heading inter-bold-white-22px" data-id="28:127">Email</div><div class="input-feild-xV1xQd input-feild" data-id="28:128"><input class="text-3JFx92 manrope-normal-abbey-22px" data-id="28:129" name="text" placeholder="Email Address" type="email" required=""></div></div><div class="sub-container" data-id="28:130"><div class="heading-Dopwrj heading inter-bold-white-22px" data-id="28:131">Phone Number</div><div class="input-feild-Dopwrj input-feild" data-id="28:132"><input class="text-GZXTOy manrope-normal-abbey-22px" data-id="28:133" name="text" placeholder="Phone Number" type="number" required=""></div></div></div><div class="container-Qmke5N" data-id="28:134"><div class="heading-FAmHNL heading inter-bold-white-22px" data-id="28:135">Your Message</div><div class="input-feild-FAmHNL input-feild" data-id="28:136"><input class="text-CqT4LH manrope-normal-abbey-22px" data-id="28:137" name="text" placeholder="Message" type="text" required=""><img class="vector-19-CqT4LH" data-id="28:138" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/vector-19.svg" alt="Vector 19"></div></div></div></div><div class="group-373-KmNYrO group-373" data-id="30:664"><div class="group-370-VfwMqc" data-id="30:387"><div class="rectangle-753-d4MjjG rectangle-753" data-id="30:24"></div><div class="group-367-d4MjjG" data-id="30:78"><div class="intagram-Lkwh6X inter-normal-abbey-22px" data-id="30:74">Intagram</div><div class="facebook-Lkwh6X inter-normal-abbey-22px" data-id="30:75">Facebook</div><div class="linkedin-Lkwh6X inter-normal-abbey-22px" data-id="30:77">Linkedin</div></div><p class="x2023-gov-atlas-sl-all-rights-reserved-d4MjjG bodymdregular" data-id="30:79">© 2023 GOV ATLAS S.L. All Rights Reserved</p><div class="infogovatlascom-d4MjjG bodymdregular" data-id="30:213">info@govatlas.com</div><p class="x34-958-27-26-04-d4MjjG bodymdregular" data-id="30:214">+34 958 27 26 04</p><img class="vector-20-d4MjjG" data-id="30:81" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/vector-20.svg" alt="Vector 20"><div class="frame-38-d4MjjG frame-38" data-id="30:307"><div class="rectangle-750-FYmvZx" data-id="30:308"></div><div class="email-FYmvZx" data-id="30:364">Email</div><div class="button-FYmvZx" data-id="30:358"><div class="rectangle-747-YsdxNG rectangle-747" data-id="30:359"></div><div class="rectangle-748-YsdxNG rectangle-748" data-id="30:360"></div><div class="contctenos-YsdxNG contctenos inter-bold-white-18px" data-id="30:361">Contáctenos</div></div></div><div class="suscribirse-al-peridico-d4MjjG" data-id="30:363">Suscribirse Al Periódico</div><p class="suscrbete-para-recib-d4MjjG inter-normal-abbey-22px" data-id="30:365">Suscríbete para recibir las nuevas actualizaciones primero.</p></div></div><div class="rectangle-753-KmNYrO rectangle-753" data-id="30:377"></div><div class="frame-26-KmNYrO frame-26" data-id="30:378"><div class="nuestro-objetivo-xYprpe nuestro-objetivo inter-bold-black-145px" data-id="30:379">Nuestro objetivo</div></div><div class="frame-15-KmNYrO" data-id="30:380"><img class="logo-hackathongssa-1-ML9GwG logo-hackathongssa-1" data-id="30:381" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/logo-hackathongssa-1-1.png" alt="logo-hackathongssa 1"></div><p class="este-principio-es-la-KmNYrO este-principio-es-la" data-id="30:382">Este principio es la base sobre la que se articulará toda relación. Desde el primer contacto que tenemos con nuestros clientes hasta las relaciones más solidas con aquellos con los que llevamos trabajando muchos años. La conanza es el elemento que con más esmero trabajamos cada día. Cercanía, contacto directo y plena disponibilidad. Trabajamos con clientes en los cinco continentes y nos desplazamos personalmente siempre que la situación lo requiera. Nuestro servicio no es un trabajo de cantidad, sino de calidad. Volvemos así al punto de encuentro: nuestros clientes nos seleccionan y nosotros seleccionamos también con quien trabajar. Este hecho, aunque mucho más trabajoso, nos permite trabajar de manera personal e involucrarnos individualmente con cada uno de vosotros. Como dijimos, se trata de seguir ampliando este círculo virtuoso, dándoles acceso a nuestro entorno relacional y profesional, con los que también intercambiarán experiencias y oportunidades únicas y exclusivas.<br><br>Por tanto, trataremos de generar ese espacio de conanza desde el primer momento, y, no les quepa duda, trabajaremos cada día para que ese nexo aumente y se haga más fuerte.</p><div class="frame-45-KmNYrO smart-layers-pointers" data-id="30:383"><div class="contctenos-Fy2qxL contctenos inter-bold-white-18px" data-id="30:384">Contáctenos</div></div><div class="frame-14-KmNYrO" data-id="1:678"><div class="rectangle-752-E259ze rectangle-752" data-id="1:679"></div><div class="frame-43-E259ze" data-id="1:680"><div class="frame-42-Z8nraL" data-id="1:681"><p class="lo-que-dicen-nuestros-clientes-xpKnHY inter-bold-black-145px" data-id="1:682">Lo que dicen nuestros clientes</p><div class="frame-13-xpKnHY" data-id="1:683"><div class="msg-1" data-id="1:684"><div class="rectangle-410" data-id="1:685"></div><p class="su-servicio-premium-cNX4eg inter-normal-tuna-24px" data-id="1:686">Su servicio premium aseguró que mi inversión no solo se completara, sino que se monitoreara continuamente, proporcionándome informes detallados cada seis semanas. Su dedicación realmente ha maximizado mis retornos.</p><div class="frame-10-cNX4eg frame-10" data-id="1:687"><div class="ashley-cooper-5PrVJe ashley-cooper inter-medium-black-27px" data-id="1:688">Santi Cooper</div><img class="component-29-5PrVJe" data-id="1:689" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/component-29.svg" alt="Component 29"></div></div></div></div><div class="frame-30-Z8nraL" data-id="1:690"><div class="frame-14-XNDLeJ" data-id="1:691"><div class="msg-1" data-id="1:692"><div class="rectangle-410" data-id="1:693"></div><p class="con-el-paquete-plati-Ghdtid inter-normal-tuna-24px" data-id="1:694">Con el paquete platino, siempre tengo acceso prioritario a los activos más rentables. Los informes mensuales durante tres años han sido invaluables para optimizar mis inversiones.</p><div class="frame-10-Ghdtid frame-10" data-id="1:695"><div class="ashley-cooper-ZPnD5I ashley-cooper inter-medium-black-27px" data-id="1:696">Amine Cooper</div><img class="component-29-ZPnD5I" data-id="1:697" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/component-29-1.svg" alt="Component 29"></div></div></div><div class="frame-15-XNDLeJ" data-id="1:698"><div class="msg-1" data-id="1:699"><div class="rectangle-410" data-id="1:700"></div><p class="gov-atlas-me-trat-de-xAXTrH inter-normal-tuna-24px" data-id="1:701">GOV Atlas me trató de manera única y exclusiva, entendiendo mis necesidades y expectativas exactas. Su enfoque personalizado se siente como tener un traje hecho a medida solo para mí.</p><div class="frame-10-xAXTrH frame-10" data-id="1:702"><div class="ashley-cooper-yQ0CVB ashley-cooper inter-medium-black-27px" data-id="1:703">Daniel Cooper</div><img class="component-29-yQ0CVB" data-id="1:704" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/component-29-2.svg" alt="Component 29"></div></div></div><div class="frame-16-XNDLeJ" data-id="1:705"><div class="msg-1" data-id="1:706"><div class="rectangle-410" data-id="1:707"></div><p class="el-compromiso-de-la-FHWoN4 inter-normal-tuna-24px" data-id="1:708">El compromiso de la empresa con la exclusividad, excelencia y confianza es evidente en cada interacción. Han creado un espacio de crecimiento mutuo y sinergias duraderas.</p><div class="frame-10-FHWoN4 frame-10" data-id="1:709"><div class="ashley-cooper-nZo8Jg ashley-cooper inter-medium-black-27px" data-id="1:710">John Cooper</div><img class="component-29-nZo8Jg" data-id="1:711" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/component-29.svg" alt="Component 29"></div></div></div></div></div></div><p class="la-confianza-como-pi-KmNYrO" data-id="36:50">La Confianza como Pilar Fundamental<br>en Nuestras Relaciones.</p><p class="pilar-de-nuestras-relaciones-y-servicios-KmNYrO" data-id="36:51">Pilar de Nuestras Relaciones y Servicios.</p><img class="group-373-OUWs0V group-373" data-id="30:665" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/668a96e5f1077d330fbdbddb/releases/668a981da48cce45c95d29de/img/group-373@2x.png" alt="Group 373"></form></div><script src="js/launchpad-banner.js" async=""></script><script defer="" src="js/restart-btn.min.js"></script><script>function ShowOnScroll() {
+    this.toShow = [];
+    this.nextEventY = undefined;
+}
+
+ShowOnScroll.prototype.show = function(e) {
+    e.style.display = "";
+};
+
+ShowOnScroll.prototype.hide = function(e) {
+    e.style.display = "none";
+};
+
+ShowOnScroll.prototype.getTop = function(e) {
+    if (e.Top != undefined && e.Top != 0) {
+        return e.Top;
+    }
+    var top = 0;
+    var iter = e;
+    do {
+        top += iter.offsetTop || 0;
+        iter = iter.offsetParent;
+    } while (iter);
+    e.Top = top;
+    return top;
+};
+
+ShowOnScroll.prototype.onScroll = function() {
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+        return;
+    }
+    this.nextEventY = undefined;
+    for (var i = 0; i < this.toShow.length; i++) {
+        var e = this.toShow[i];
+        var top = this.getTop(e);
+        if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+        } else {
+            this.nextEventY = top;
+            break;
+        }
+    }
+};
+
+ShowOnScroll.prototype.resetScrolling = function() {
+    // Clear state
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    for (var i = 0; i < this.toShow.length; i++) {
+        var e = this.toShow[i];
+        this.show(e);
+    }
+    this.toShow = [];
+    this.nextEventY == undefined;
+
+    // Collect items
+    var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+    itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) { return e.getAttribute("show-on-scroll") != undefined });
+    var getTop = this.getTop;
+    itemsToShowOnScroll.sort(function(a, b) {
+        return getTop(a) - getTop(b);
+    });
+    for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+        var e = itemsToShowOnScroll[i];
+        var top = this.getTop(e);
+        if (top < screenBottom) {
+            continue;
+        }
+        this.toShow.push(e);
+        this.hide(e);
+        this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+    }
+};
+
+ShowOnScroll.prototype.handleEvent = function(e) {
+    switch (e.type) {
+        case "scroll":
+            this.onScroll();
+            break;
+        case "resize":
+            this.resetScrolling();
+            break;
+    }
+};
+
+ShowOnScroll.prototype.init = function() {
+    this.resetScrolling();
+    window.addEventListener("scroll", this);
+    window.addEventListener("resize", this);
+};
+
+// After anima-src
+setTimeout(function() {
+    var instShowOnScroll = new ShowOnScroll();
+    instShowOnScroll.init();
+}, 250);</script><script>/* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+if (!HTMLFormElement.prototype.reportValidity) {
+    HTMLFormElement.prototype.reportValidity = function () {
+        if (this.checkValidity()) return true;
+        var btn = document.createElement('button');
+        this.appendChild(btn);
+        btn.click();
+        this.removeChild(btn);
+        return false;
+    };
+}
+
+function SubmitForm(form_name) {
+    var form = document.getElementsByName(form_name)[0];
+    if (form.reportValidity()) {
+        form.submit();
+        if (window.submitted) window.submitted();
+    }
+}</script></body></html>
